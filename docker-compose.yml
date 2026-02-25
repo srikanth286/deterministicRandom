@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  deterministic-random:
+    build: .
+    image: deterministic-rand
+    container_name: deterministic-rand-container
+    environment:
+      # Customize the pattern block sizes (in bytes)
+      - COUNT=1024
+    stdin_open: true
+    tty: true
+    command: /bin/bash
